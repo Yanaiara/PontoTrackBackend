@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use('/auth', authRoutes);
-app.use('/api', clockInRoutes); 
+app.use('/api', clockInRoutes);
 
 const PORT = process.env.PORT || 5000;
 
