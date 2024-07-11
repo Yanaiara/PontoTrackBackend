@@ -6,7 +6,11 @@ const register = async (req, res) => {
     const user = await AuthService.createUser({ firstName, lastName, email, password });
     res.status(201).json(user);
   } catch (error) {
-    res.status(500).json({ error: 'User creation failed' });
+    if(error.message === "User with the same name already exists") {
+      res.status(400).json({error: error.message});
+    } else {
+      res.status(500).json({ error: 'User creation failed' });
+    }
   }
 };
 
