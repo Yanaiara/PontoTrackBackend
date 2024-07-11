@@ -6,10 +6,13 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    timestamp: {
+    clockIn: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
+    },
+    clockOut: {
+      type: DataTypes.DATE,
     },
     latitude: {
       type: DataTypes.FLOAT,
