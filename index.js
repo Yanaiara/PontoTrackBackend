@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { initDb } = require('./models');
 const authRoutes = require('./routes/authRoutes');
+const clockInRoutes = require('./routes/clockInRoutes');
 
 const app = express();
 
