@@ -19,5 +19,12 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false
     }
+  }, {
+    indexes: [
+      {
+        unique: true,
+        fields: ['firstName', 'lastName']
+      }
+    ]
   });
 };
